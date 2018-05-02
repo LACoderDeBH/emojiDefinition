@@ -73,30 +73,52 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💒" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRm-pB-b3a">
-                                <rect key="frame" x="37.5" y="84" width="245" height="269"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="225"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Love Chapel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUP-2h-amW">
-                                <rect key="frame" x="10" y="449" width="300" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GQH-G2-BSh">
+                                <rect key="frame" x="38" y="75" width="245" height="330.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💒" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRm-pB-b3a">
+                                        <rect key="frame" x="0.0" y="0.0" width="245" height="269"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="225"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: Transportation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yR-0R-qck">
+                                        <rect key="frame" x="27" y="269" width="191.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birth Year: 2013" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cP-SO-9bP">
+                                        <rect key="frame" x="61.5" y="289.5" width="122" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Love Chapel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUP-2h-amW">
+                                        <rect key="frame" x="73" y="310" width="99.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="aRm-pB-b3a" secondAttribute="trailing" id="Afe-LK-NTH"/>
+                                    <constraint firstItem="aRm-pB-b3a" firstAttribute="leading" secondItem="GQH-G2-BSh" secondAttribute="leading" id="fYg-7A-kQw"/>
+                                    <constraint firstItem="FUP-2h-amW" firstAttribute="top" secondItem="3cP-SO-9bP" secondAttribute="bottom" id="pfk-cY-yBM"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="FUP-2h-amW" firstAttribute="leading" secondItem="7T6-kD-OHj" secondAttribute="leading" constant="10" id="0gv-Zl-UOl"/>
-                            <constraint firstItem="7T6-kD-OHj" firstAttribute="trailing" secondItem="FUP-2h-amW" secondAttribute="trailing" constant="10" id="N0U-31-k5P"/>
-                            <constraint firstItem="aRm-pB-b3a" firstAttribute="centerX" secondItem="7T6-kD-OHj" secondAttribute="centerX" id="Ry3-Wz-ygo"/>
-                            <constraint firstItem="aRm-pB-b3a" firstAttribute="top" secondItem="7T6-kD-OHj" secondAttribute="top" constant="20" id="h8a-Db-bvI"/>
-                            <constraint firstItem="7T6-kD-OHj" firstAttribute="bottom" secondItem="FUP-2h-amW" secondAttribute="bottom" constant="10" id="iDJ-2x-lye"/>
+                            <constraint firstItem="GQH-G2-BSh" firstAttribute="centerY" secondItem="5fz-gP-D40" secondAttribute="centerY" id="TKh-we-4j7"/>
+                            <constraint firstItem="GQH-G2-BSh" firstAttribute="centerX" secondItem="5fz-gP-D40" secondAttribute="centerX" id="dso-iN-Nnb"/>
+                            <constraint firstItem="GQH-G2-BSh" firstAttribute="centerX" secondItem="5fz-gP-D40" secondAttribute="centerX" id="zPK-5u-Vsx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7T6-kD-OHj"/>
                     </view>
                     <connections>
+                        <outlet property="birthYearLabel" destination="3cP-SO-9bP" id="7qP-yX-DU1"/>
+                        <outlet property="categoryLabel" destination="7yR-0R-qck" id="5Ix-SP-Wmq"/>
                         <outlet property="emojiDefinition" destination="FUP-2h-amW" id="DOr-PX-Tsa"/>
                         <outlet property="emojiLabel" destination="aRm-pB-b3a" id="fzq-UL-07i"/>
                     </connections>

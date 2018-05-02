@@ -10,10 +10,11 @@ import UIKit
 
 class EmojiTableViewController: UITableViewController {
     
-    var emojis = ["😀", "💩", "🏎", "💒", "🍎", "🥑"]
-
+    var emojis : [Emoji] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        emojis = createEmojis()
 
     }
 
@@ -28,7 +29,7 @@ class EmojiTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
 
-        cell.textLabel?.text = emojis[indexPath.row]
+        cell.textLabel?.text = emojis[indexPath.row].theEmoji
         return cell
     }
     
@@ -41,7 +42,52 @@ class EmojiTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let emojiDefVC = segue.destination as! EmojiDefinitionViewController
-        emojiDefVC.emoji = sender as! String
+        emojiDefVC.emoji = sender as! Emoji
     }
+
+    
+    //["😀", "💩", "🏎", "💒", "🍎", "🥑"]
+
+    func createEmojis() -> [Emoji] {
+        let smiley = Emoji()
+        smiley.theEmoji = "😀"
+        smiley.def = "Smiley face"
+        smiley.birthYear = 2010
+        smiley.category = "Faces"
+        
+        let poop = Emoji()
+        poop.theEmoji = "💩"
+        poop.def = "Poop Face"
+        poop.birthYear = 2012
+        poop.category = "Stinky"
+        
+         
+        let racecar = Emoji()
+        racecar.theEmoji = "🏎"
+        racecar.def = "Race Car"
+        racecar.birthYear = 2013
+        racecar.category = "Transportation"
+         
+        let chapel = Emoji()
+        chapel.theEmoji = "💒"
+        chapel.def = "Love Chapel"
+        chapel.birthYear = 2011
+        chapel.category = "Building"
+         
+        let apple = Emoji()
+        apple.theEmoji = "🍎"
+        apple.def = "Apple"
+        apple.birthYear = 2010
+        apple.category = "Fruit"
+         
+        let avocado = Emoji()
+        avocado.theEmoji = "🥑"
+        avocado.def = "Avocado"
+        avocado.birthYear = 2011
+        avocado.category = "Fruit"
+        
+        return [smiley, poop, racecar, chapel, apple, avocado]
+    }
+    
     
 }
